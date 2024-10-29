@@ -14,6 +14,12 @@ Judge0 IDE is using [**Judge0**](https://ce.judge0.com) for executing the user's
 
 Visit https://ide.judge0.com, and enjoy happy coding. :)
 
+## Docker
+```
+docker build -t judge0 .
+docker run -d -p 80:80 judge0
+```
+
 ## Community
 Do you have a question, feature request, or something else on your mind? Or do you want to follow Judge0 news?
 
