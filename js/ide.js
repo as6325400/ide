@@ -7,7 +7,7 @@ const AUTH_HEADERS = API_KEY ? {
 var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
 var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
 
-// defaultUrl = "";
+defaultUrl = "http://server:2358";
 
 if (location.hostname == "ide.judge0.com") {
     defaultUrl = "https://ce.judge0.com";
