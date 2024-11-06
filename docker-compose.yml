@@ -6,6 +6,16 @@ x-logging:
       max-size: 100M
 
 services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_server
+    ports:
+      - "8085:80"
+    volumes:
+      - ./nginx_default:/etc/nginx/conf.d/default:ro 
+      - ./:/var/www/html
+    restart: always
+
   server:
     image: judge0/judge0:1.13.1
     volumes:
@@ -41,15 +51,6 @@ services:
     ]
     env_file: judge0.conf
     <<: *default-logging
-    restart: always
-
-  ide:
-    build: .
-    ports:
-      - "8080:80"
-    <<: *default-logging
-    networks:
-      - judge0-network
     restart: always
 
 volumes:
