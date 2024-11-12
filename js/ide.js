@@ -4,8 +4,8 @@ const AUTH_HEADERS = API_KEY ? {
     "X-RapidAPI-Key": API_KEY
 } : {};
 
-var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
-// var defaultUrl = localStorageGetItem("api-url") || "http://localhost:8085/api";
+// var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
+var defaultUrl = localStorageGetItem("api-url") || "https://judge0.as6325400.org/api";
 var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
 
 
